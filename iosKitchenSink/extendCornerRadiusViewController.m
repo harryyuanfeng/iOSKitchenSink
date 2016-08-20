@@ -14,7 +14,10 @@
     [self.view setBackgroundColor:[UIColor whiteColor]];
     UIButton *roundButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
     [roundButton setBackgroundColor:[UIColor blueColor]];
-    [roundButton.layer setCornerRadiusScale:50];
+    // 你可以用这个来定义corner radius
+    //[roundButton.layer setCornerRadiusScale:50];
+    // 或者这种来定也corner radius 也可以
+    roundButton.layer.cornerRadiusPScale = 50;
     [self.view addSubview:roundButton];
 }
 @end

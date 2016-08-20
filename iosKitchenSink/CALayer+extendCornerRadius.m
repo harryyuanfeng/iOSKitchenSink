@@ -12,4 +12,9 @@
 -(void)setCornerRadiusScale:(CGFloat)cornerRadius{
     [self setCornerRadius:cornerRadius*2];  
 }
+
+@dynamic cornerRadiusPScale;
+-(void)setCornerRadiusPScale:(CGFloat)cornerRadius{
+    [self setCornerRadius:cornerRadius*2];
+}
 @end
