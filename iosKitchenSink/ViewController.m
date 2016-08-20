@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "extendCornerRadiusViewController.h"
 
 @interface ViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (strong, nonatomic) UITableView *tableView;
@@ -44,7 +45,7 @@
     
     tableView.delegate = self;
     tableView.dataSource = self;
-    _tableCellTitle = [[NSArray alloc] initWithObjects:@"预留功能",@"预留功能",@"预留功能",@"预留功能",@"预留功能",@"预留功能", nil];
+    _tableCellTitle = [[NSArray alloc] initWithObjects:@"扩展CAlayer corner radius",@"预留功能",@"预留功能",@"预留功能",@"预留功能",@"预留功能", nil];
     return tableView;
 }
 
@@ -76,7 +77,10 @@
 
 -(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    if(indexPath.row == 1){
+        extendCornerRadiusViewController *vc = [[extendCornerRadiusViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
