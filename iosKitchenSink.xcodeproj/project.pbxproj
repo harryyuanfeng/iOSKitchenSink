@@ -122,8 +122,7 @@
 			children = (
 				2F6CBE5F1D67E17F008D2513 /* AppDelegate.h */,
 				2F6CBE601D67E17F008D2513 /* AppDelegate.m */,
-				2F6CBE621D67E17F008D2513 /* ViewController.h */,
-				2F6CBE631D67E17F008D2513 /* ViewController.m */,
+				2F6CBE921D67E436008D2513 /* ViewController */,
 				2F6CBE651D67E17F008D2513 /* Main.storyboard */,
 				2F6CBE6B1D67E17F008D2513 /* Assets.xcassets */,
 				2F6CBE6D1D67E17F008D2513 /* LaunchScreen.storyboard */,
@@ -158,6 +157,15 @@
 				2F6CBE861D67E180008D2513 /* Info.plist */,
 			);
 			path = iosKitchenSinkUITests;
+			sourceTree = "<group>";
+		};
+		2F6CBE921D67E436008D2513 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2F6CBE621D67E17F008D2513 /* ViewController.h */,
+				2F6CBE631D67E17F008D2513 /* ViewController.m */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 		5970E1B4FC4C891F2254408B /* Frameworks */ = {
