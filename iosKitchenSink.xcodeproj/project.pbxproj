@@ -16,6 +16,9 @@
 		2F6CBE6F1D67E17F008D2513 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F6CBE6D1D67E17F008D2513 /* LaunchScreen.storyboard */; };
 		2F6CBE7A1D67E180008D2513 /* iosKitchenSinkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6CBE791D67E180008D2513 /* iosKitchenSinkTests.m */; };
 		2F6CBE851D67E180008D2513 /* iosKitchenSinkUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6CBE841D67E180008D2513 /* iosKitchenSinkUITests.m */; };
+		663D917A952A38CDBC9FEB2A /* libPods-iosKitchenSinkTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66D2D1FF66001EDA127CC78F /* libPods-iosKitchenSinkTests.a */; };
+		A7721A1C8D2C5D21E2BA5FBA /* libPods-iosKitchenSink.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17653E3B8BF4590210122402 /* libPods-iosKitchenSink.a */; };
+		E0F7189170C106C91EBC5FBF /* libPods-iosKitchenSinkUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE912442F397D3D035C95736 /* libPods-iosKitchenSinkUITests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		17653E3B8BF4590210122402 /* libPods-iosKitchenSink.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iosKitchenSink.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BDE557EE23355CAD5BD4108 /* Pods-iosKitchenSinkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosKitchenSinkTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iosKitchenSinkTests/Pods-iosKitchenSinkTests.release.xcconfig"; sourceTree = "<group>"; };
 		2F6CBE591D67E17F008D2513 /* iosKitchenSink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosKitchenSink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F6CBE5D1D67E17F008D2513 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2F6CBE5F1D67E17F008D2513 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -53,6 +58,13 @@
 		2F6CBE801D67E180008D2513 /* iosKitchenSinkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iosKitchenSinkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F6CBE841D67E180008D2513 /* iosKitchenSinkUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iosKitchenSinkUITests.m; sourceTree = "<group>"; };
 		2F6CBE861D67E180008D2513 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B9ED24AFFAB9F7245FFB32C /* Pods-iosKitchenSinkUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosKitchenSinkUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iosKitchenSinkUITests/Pods-iosKitchenSinkUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		66D2D1FF66001EDA127CC78F /* libPods-iosKitchenSinkTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iosKitchenSinkTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AFBAF279906569D462D0AD5 /* Pods-iosKitchenSink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosKitchenSink.release.xcconfig"; path = "Pods/Target Support Files/Pods-iosKitchenSink/Pods-iosKitchenSink.release.xcconfig"; sourceTree = "<group>"; };
+		856E8670B4579AC911D749E5 /* Pods-iosKitchenSinkUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosKitchenSinkUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iosKitchenSinkUITests/Pods-iosKitchenSinkUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B427FAEF33AC4140EDD04134 /* Pods-iosKitchenSink.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosKitchenSink.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iosKitchenSink/Pods-iosKitchenSink.debug.xcconfig"; sourceTree = "<group>"; };
+		BE912442F397D3D035C95736 /* libPods-iosKitchenSinkUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iosKitchenSinkUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC95AA8448318A64786025F9 /* Pods-iosKitchenSinkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosKitchenSinkTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iosKitchenSinkTests/Pods-iosKitchenSinkTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7721A1C8D2C5D21E2BA5FBA /* libPods-iosKitchenSink.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				663D917A952A38CDBC9FEB2A /* libPods-iosKitchenSinkTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0F7189170C106C91EBC5FBF /* libPods-iosKitchenSinkUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +102,8 @@
 				2F6CBE781D67E180008D2513 /* iosKitchenSinkTests */,
 				2F6CBE831D67E180008D2513 /* iosKitchenSinkUITests */,
 				2F6CBE5A1D67E17F008D2513 /* Products */,
+				7650C84652D2E0C90F035385 /* Pods */,
+				5970E1B4FC4C891F2254408B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,6 +160,29 @@
 			path = iosKitchenSinkUITests;
 			sourceTree = "<group>";
 		};
+		5970E1B4FC4C891F2254408B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				17653E3B8BF4590210122402 /* libPods-iosKitchenSink.a */,
+				66D2D1FF66001EDA127CC78F /* libPods-iosKitchenSinkTests.a */,
+				BE912442F397D3D035C95736 /* libPods-iosKitchenSinkUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7650C84652D2E0C90F035385 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B427FAEF33AC4140EDD04134 /* Pods-iosKitchenSink.debug.xcconfig */,
+				6AFBAF279906569D462D0AD5 /* Pods-iosKitchenSink.release.xcconfig */,
+				CC95AA8448318A64786025F9 /* Pods-iosKitchenSinkTests.debug.xcconfig */,
+				1BDE557EE23355CAD5BD4108 /* Pods-iosKitchenSinkTests.release.xcconfig */,
+				3B9ED24AFFAB9F7245FFB32C /* Pods-iosKitchenSinkUITests.debug.xcconfig */,
+				856E8670B4579AC911D749E5 /* Pods-iosKitchenSinkUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,9 +190,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F6CBE891D67E180008D2513 /* Build configuration list for PBXNativeTarget "iosKitchenSink" */;
 			buildPhases = (
+				684DAC86C320320522024497 /* [CP] Check Pods Manifest.lock */,
 				2F6CBE551D67E17F008D2513 /* Sources */,
 				2F6CBE561D67E17F008D2513 /* Frameworks */,
 				2F6CBE571D67E17F008D2513 /* Resources */,
+				298DF3B8F543D36578174B4E /* [CP] Embed Pods Frameworks */,
+				F17DB8AF590498BC307BF082 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +210,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F6CBE8C1D67E180008D2513 /* Build configuration list for PBXNativeTarget "iosKitchenSinkTests" */;
 			buildPhases = (
+				7D3AC94ACC5514698148A8BA /* [CP] Check Pods Manifest.lock */,
 				2F6CBE711D67E180008D2513 /* Sources */,
 				2F6CBE721D67E180008D2513 /* Frameworks */,
 				2F6CBE731D67E180008D2513 /* Resources */,
+				4959605A9ABD4F7BA2146AE1 /* [CP] Embed Pods Frameworks */,
+				0C9CFC9CC61574D9441646EE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -185,9 +231,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F6CBE8F1D67E180008D2513 /* Build configuration list for PBXNativeTarget "iosKitchenSinkUITests" */;
 			buildPhases = (
+				4702192A81F44A9C32965BB1 /* [CP] Check Pods Manifest.lock */,
 				2F6CBE7C1D67E180008D2513 /* Sources */,
 				2F6CBE7D1D67E180008D2513 /* Frameworks */,
 				2F6CBE7E1D67E180008D2513 /* Resources */,
+				DEF6C10D0BE2015E52361530 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -267,6 +315,129 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C9CFC9CC61574D9441646EE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iosKitchenSinkTests/Pods-iosKitchenSinkTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		298DF3B8F543D36578174B4E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iosKitchenSink/Pods-iosKitchenSink-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4702192A81F44A9C32965BB1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4959605A9ABD4F7BA2146AE1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iosKitchenSinkTests/Pods-iosKitchenSinkTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		684DAC86C320320522024497 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7D3AC94ACC5514698148A8BA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DEF6C10D0BE2015E52361530 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iosKitchenSinkUITests/Pods-iosKitchenSinkUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F17DB8AF590498BC307BF082 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iosKitchenSink/Pods-iosKitchenSink-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2F6CBE551D67E17F008D2513 /* Sources */ = {
@@ -415,6 +586,7 @@
 		};
 		2F6CBE8A1D67E180008D2513 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B427FAEF33AC4140EDD04134 /* Pods-iosKitchenSink.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = iosKitchenSink/Info.plist;
@@ -426,6 +598,7 @@
 		};
 		2F6CBE8B1D67E180008D2513 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AFBAF279906569D462D0AD5 /* Pods-iosKitchenSink.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = iosKitchenSink/Info.plist;
@@ -437,6 +610,7 @@
 		};
 		2F6CBE8D1D67E180008D2513 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC95AA8448318A64786025F9 /* Pods-iosKitchenSinkTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = iosKitchenSinkTests/Info.plist;
@@ -449,6 +623,7 @@
 		};
 		2F6CBE8E1D67E180008D2513 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BDE557EE23355CAD5BD4108 /* Pods-iosKitchenSinkTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = iosKitchenSinkTests/Info.plist;
@@ -461,6 +636,7 @@
 		};
 		2F6CBE901D67E180008D2513 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B9ED24AFFAB9F7245FFB32C /* Pods-iosKitchenSinkUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = iosKitchenSinkUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -472,6 +648,7 @@
 		};
 		2F6CBE911D67E180008D2513 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 856E8670B4579AC911D749E5 /* Pods-iosKitchenSinkUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = iosKitchenSinkUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -500,6 +677,7 @@
 				2F6CBE8B1D67E180008D2513 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2F6CBE8C1D67E180008D2513 /* Build configuration list for PBXNativeTarget "iosKitchenSinkTests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +686,7 @@
 				2F6CBE8E1D67E180008D2513 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2F6CBE8F1D67E180008D2513 /* Build configuration list for PBXNativeTarget "iosKitchenSinkUITests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +695,7 @@
 				2F6CBE911D67E180008D2513 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
