@@ -45,7 +45,7 @@
     
     tableView.delegate = self;
     tableView.dataSource = self;
-    _tableCellTitle = [[NSArray alloc] initWithObjects:@"扩展CAlayer corner radius",@"预留功能",@"预留功能",@"预留功能",@"预留功能",@"预留功能", nil];
+    _tableCellTitle = [[NSArray alloc] initWithObjects:@"扩展CAlayer corner radius", nil];
     return tableView;
 }
 
@@ -59,13 +59,13 @@
 // number of row in the section, I assume there is only 1 row
 - (NSInteger)tableView:(UITableView *)theTableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    return _tableCellTitle.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"newFriendCell";
+    NSString *CellIdentifier = @"newFriendCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (cell == nil) {
@@ -75,9 +75,9 @@
     return cell;
 }
 
--(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if(indexPath.row == 1){
+    if(indexPath.row == 0){
         extendCornerRadiusViewController *vc = [[extendCornerRadiusViewController alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }
