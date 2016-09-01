@@ -8,11 +8,12 @@
 
 #import "extendCornerRadiusViewController.h"
 #import "CALayer+extendCornerRadius.h"
+#import "Define.h"
 @implementation extendCornerRadiusViewController
 -(void)viewDidLoad{
     [super viewDidLoad];
     [self.view setBackgroundColor:[UIColor whiteColor]];
-    UIButton *roundButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
+    UIButton *roundButton = [[UIButton alloc] initWithFrame:RectMake(100, 100, 100, 100)];
     [roundButton setBackgroundColor:[UIColor blueColor]];
     // 你可以用这个来定义corner radius
     //[roundButton.layer setCornerRadiusScale:50];

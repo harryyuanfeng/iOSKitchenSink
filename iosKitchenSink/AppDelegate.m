@@ -17,7 +17,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self setUpLeanCloud];
     return YES;
+}
+
+-(void)setUpLeanCloud{
+    [AVOSCloud setApplicationId:@"3B5q4r6AsrWoE1orGXR92nk3-gzGzoHsz" clientKey:@"v2TBzkoAUaz077HwOFDM7Hhc"];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

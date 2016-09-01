@@ -7,7 +7,6 @@
 //
 
 #import <QuartzCore/QuartzCore.h>
-
 @interface CALayer (extendCornerRadius)
 @property CGFloat cornerRadiusPScale;
 -(void)setCornerRadiusScale:(CGFloat)cornerRadius;

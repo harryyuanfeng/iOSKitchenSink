@@ -45,7 +45,7 @@
     
     tableView.delegate = self;
     tableView.dataSource = self;
-    _tableCellTitle = [[NSArray alloc] initWithObjects:@"扩展CAlayer corner radius", nil];
+    _tableCellTitle = [[NSArray alloc] initWithObjects:@"扩展CAlayer corner radius",@"leancloud cloud Engine", nil];
     return tableView;
 }
 

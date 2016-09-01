@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F05AEE81D780E200029249E /* LeanCloudCloudEngineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F05AEE71D780E200029249E /* LeanCloudCloudEngineViewController.m */; };
 		2F6CBE5E1D67E17F008D2513 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6CBE5D1D67E17F008D2513 /* main.m */; };
 		2F6CBE611D67E17F008D2513 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6CBE601D67E17F008D2513 /* AppDelegate.m */; };
 		2F6CBE641D67E17F008D2513 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6CBE631D67E17F008D2513 /* ViewController.m */; };
@@ -43,6 +44,9 @@
 /* Begin PBXFileReference section */
 		17653E3B8BF4590210122402 /* libPods-iosKitchenSink.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iosKitchenSink.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BDE557EE23355CAD5BD4108 /* Pods-iosKitchenSinkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosKitchenSinkTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iosKitchenSinkTests/Pods-iosKitchenSinkTests.release.xcconfig"; sourceTree = "<group>"; };
+		2F05AEE51D780DAF0029249E /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		2F05AEE61D780E200029249E /* LeanCloudCloudEngineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeanCloudCloudEngineViewController.h; sourceTree = "<group>"; };
+		2F05AEE71D780E200029249E /* LeanCloudCloudEngineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeanCloudCloudEngineViewController.m; sourceTree = "<group>"; };
 		2F6CBE591D67E17F008D2513 /* iosKitchenSink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosKitchenSink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F6CBE5D1D67E17F008D2513 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2F6CBE5F1D67E17F008D2513 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -64,6 +68,7 @@
 		2F6CBE9B1D67FC80008D2513 /* CALayer+extendCornerRadius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+extendCornerRadius.m"; sourceTree = "<group>"; };
 		2F6CBE9D1D680002008D2513 /* extendCornerRadiusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = extendCornerRadiusViewController.h; sourceTree = "<group>"; };
 		2F6CBE9E1D680002008D2513 /* extendCornerRadiusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = extendCornerRadiusViewController.m; sourceTree = "<group>"; };
+		2F6CBEA01D682FAE008D2513 /* Define.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Define.h; sourceTree = "<group>"; };
 		3B9ED24AFFAB9F7245FFB32C /* Pods-iosKitchenSinkUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosKitchenSinkUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iosKitchenSinkUITests/Pods-iosKitchenSinkUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		66D2D1FF66001EDA127CC78F /* libPods-iosKitchenSinkTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iosKitchenSinkTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AFBAF279906569D462D0AD5 /* Pods-iosKitchenSink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosKitchenSink.release.xcconfig"; path = "Pods/Target Support Files/Pods-iosKitchenSink/Pods-iosKitchenSink.release.xcconfig"; sourceTree = "<group>"; };
@@ -104,6 +109,7 @@
 		2F6CBE501D67E17F008D2513 = {
 			isa = PBXGroup;
 			children = (
+				2F05AEE51D780DAF0029249E /* PrefixHeader.pch */,
 				2F6CBE5B1D67E17F008D2513 /* iosKitchenSink */,
 				2F6CBE781D67E180008D2513 /* iosKitchenSinkTests */,
 				2F6CBE831D67E180008D2513 /* iosKitchenSinkUITests */,
@@ -173,6 +179,8 @@
 				2F6CBE631D67E17F008D2513 /* ViewController.m */,
 				2F6CBE9D1D680002008D2513 /* extendCornerRadiusViewController.h */,
 				2F6CBE9E1D680002008D2513 /* extendCornerRadiusViewController.m */,
+				2F05AEE61D780E200029249E /* LeanCloudCloudEngineViewController.h */,
+				2F05AEE71D780E200029249E /* LeanCloudCloudEngineViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -180,6 +188,7 @@
 		2F6CBE931D67EFFB008D2513 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				2F6CBEA01D682FAE008D2513 /* Define.h */,
 				2F6CBE9A1D67FC80008D2513 /* CALayer+extendCornerRadius.h */,
 				2F6CBE9B1D67FC80008D2513 /* CALayer+extendCornerRadius.m */,
 			);
@@ -474,6 +483,7 @@
 				2F6CBE641D67E17F008D2513 /* ViewController.m in Sources */,
 				2F6CBE6A1D67E17F008D2513 /* iosKitchenSink.xcdatamodeld in Sources */,
 				2F6CBE611D67E17F008D2513 /* AppDelegate.m in Sources */,
+				2F05AEE81D780E200029249E /* LeanCloudCloudEngineViewController.m in Sources */,
 				2F6CBE5E1D67E17F008D2513 /* main.m in Sources */,
 				2F6CBE9F1D680002008D2513 /* extendCornerRadiusViewController.m in Sources */,
 			);
@@ -617,6 +627,7 @@
 			baseConfigurationReference = B427FAEF33AC4140EDD04134 /* Pods-iosKitchenSink.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = /Users/harryfeng/Documents/iOSKitchenSink/PrefixHeader.pch;
 				INFOPLIST_FILE = iosKitchenSink/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.harryfeng.iosKitchenSink;
@@ -629,6 +640,7 @@
 			baseConfigurationReference = 6AFBAF279906569D462D0AD5 /* Pods-iosKitchenSink.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = /Users/harryfeng/Documents/iOSKitchenSink/PrefixHeader.pch;
 				INFOPLIST_FILE = iosKitchenSink/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.harryfeng.iosKitchenSink;

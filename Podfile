@@ -6,7 +6,7 @@ target 'iosKitchenSink' do
   # use_frameworks!
 
   # Pods for iosKitchenSink
-
+  pod 'AVOSCloud','3.3.1'
   target 'iosKitchenSinkTests' do
     inherit! :search_paths
     # Pods for testing

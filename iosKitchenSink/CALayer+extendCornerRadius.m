@@ -7,14 +7,14 @@
 //
 
 #import "CALayer+extendCornerRadius.h"
-
+#import "Define.h"
 @implementation CALayer (extendCornerRadius)
 -(void)setCornerRadiusScale:(CGFloat)cornerRadius{
-    [self setCornerRadius:cornerRadius*2];  
+    [self setCornerRadius:cornerRadius*SCALE_HEIGHT];  
 }
 
 @dynamic cornerRadiusPScale;
 -(void)setCornerRadiusPScale:(CGFloat)cornerRadius{
-    [self setCornerRadius:cornerRadius*2];
+    [self setCornerRadius:cornerRadius*SCALE_HEIGHT];
 }
 @end
