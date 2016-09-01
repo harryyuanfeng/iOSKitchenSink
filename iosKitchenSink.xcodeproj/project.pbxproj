@@ -106,6 +106,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F05AEE91D78225C0029249E /* extendCornerRadiusViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2F6CBE9D1D680002008D2513 /* extendCornerRadiusViewController.h */,
+				2F6CBE9E1D680002008D2513 /* extendCornerRadiusViewController.m */,
+			);
+			name = extendCornerRadiusViewController;
+			sourceTree = "<group>";
+		};
+		2F05AEEA1D7822660029249E /* LeanCloudCloudEngineViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2F05AEE61D780E200029249E /* LeanCloudCloudEngineViewController.h */,
+				2F05AEE71D780E200029249E /* LeanCloudCloudEngineViewController.m */,
+			);
+			name = LeanCloudCloudEngineViewController;
+			sourceTree = "<group>";
+		};
+		2F05AEEB1D7822850029249E /* HomeTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2F6CBE621D67E17F008D2513 /* ViewController.h */,
+				2F6CBE631D67E17F008D2513 /* ViewController.m */,
+			);
+			name = HomeTableViewController;
+			sourceTree = "<group>";
+		};
 		2F6CBE501D67E17F008D2513 = {
 			isa = PBXGroup;
 			children = (
@@ -175,12 +202,9 @@
 		2F6CBE921D67E436008D2513 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				2F6CBE621D67E17F008D2513 /* ViewController.h */,
-				2F6CBE631D67E17F008D2513 /* ViewController.m */,
-				2F6CBE9D1D680002008D2513 /* extendCornerRadiusViewController.h */,
-				2F6CBE9E1D680002008D2513 /* extendCornerRadiusViewController.m */,
-				2F05AEE61D780E200029249E /* LeanCloudCloudEngineViewController.h */,
-				2F05AEE71D780E200029249E /* LeanCloudCloudEngineViewController.m */,
+				2F05AEEB1D7822850029249E /* HomeTableViewController */,
+				2F05AEE91D78225C0029249E /* extendCornerRadiusViewController */,
+				2F05AEEA1D7822660029249E /* LeanCloudCloudEngineViewController */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";

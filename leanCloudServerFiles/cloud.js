@@ -17,4 +17,14 @@ AV.Cloud.define('getTodo', function(request, response) {
     });
 });
 
+
+AV.Cloud.define('rpcGetTodo', function(request, response) {
+    var query = new AV.Query('Todo');
+    query.include("category");
+    query.find().then(function (todos) {
+        response.success(todos);
+    }, function (error) {
+    });
+});
+
 module.exports = AV.Cloud;
