@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "extendCornerRadiusViewController.h"
-
+#import "LeanCloudCloudEngineViewController.h"
 @interface ViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (strong, nonatomic) UITableView *tableView;
 @property (strong, nonatomic) NSArray *tableCellTitle;
@@ -79,6 +79,10 @@
 {
     if(indexPath.row == 0){
         extendCornerRadiusViewController *vc = [[extendCornerRadiusViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    if(indexPath.row == 1){
+        LeanCloudCloudEngineViewController *vc = [[LeanCloudCloudEngineViewController alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }
 }
