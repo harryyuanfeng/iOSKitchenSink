@@ -17,6 +17,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view setBackgroundColor:[UIColor whiteColor]];
+    [self localIncludeTry];
+    [self cloudIncludTry];
+    // Do any additional setup after loading the view.
+}
+
+-(void)localIncludeTry{
     [AVUser logInWithUsernameInBackground:@"111" password:@"1" block:^(AVUser *user, NSError *error) {
         AVObject *mycategory = [user objectForKey:@"category"];
         NSString *name = [mycategory objectForKey:@"name"];
@@ -31,8 +37,10 @@
             NSLog(@"%@",[category objectForKey:@"name"]);
         }];
     }];
+}
+
+-(void)cloudIncludTry{
     
-    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {

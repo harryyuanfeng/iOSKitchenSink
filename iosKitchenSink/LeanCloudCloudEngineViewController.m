@@ -17,7 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view setBackgroundColor:[UIColor whiteColor]];
-    [self functionTwo];
+    //[self functionTwo];
+    [self functionThree];
     // Do any additional setup after loading the view.
     
     
@@ -63,6 +64,28 @@
                                            AVFile *file = [theObject objectForKey:@"headerImage"];
                                            NSNumber *count = [theObject objectForKey:@"count"];
                                            NSArray *tags = [theObject objectForKey:@"tags"];
+                                           NSDate *createdAt = theObject.createdAt;
+                                           NSDate *date = [theObject objectForKey:@"date"];
+                                           AVObject *category = [theObject objectForKey:@"category"];
+                                           NSString *cagegoryName = [category objectForKey:@"name"];
+                                           NSLog(cagegoryName);
+                                       }
+                                   }
+                                   else {
+                                       NSLog(@"getTodo Error: %@", error);
+                                   }
+                               }];
+}
+
+-(void)functionThree{
+    NSDictionary *dicParameters = [NSDictionary dictionaryWithObject:@"夏洛特烦恼"
+                                                              forKey:@"movie"];
+    
+    [AVCloud rpcFunctionInBackground:@"cqlInPointerSearch"
+                      withParameters:dicParameters
+                               block:^(id object, NSError *error) {
+                                   if(error == nil){
+                                       for(AVObject *theObject in (NSArray *)object){
                                            AVObject *category = [theObject objectForKey:@"category"];
                                            NSString *cagegoryName = [category objectForKey:@"name"];
                                            NSLog(cagegoryName);
