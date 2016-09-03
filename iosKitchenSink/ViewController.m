@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "extendCornerRadiusViewController.h"
 #import "LeanCloudCloudEngineViewController.h"
+#import "UserIncludePointerViewController.h"
+
 @interface ViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (strong, nonatomic) UITableView *tableView;
 @property (strong, nonatomic) NSArray *tableCellTitle;
@@ -45,7 +47,7 @@
     
     tableView.delegate = self;
     tableView.dataSource = self;
-    _tableCellTitle = [[NSArray alloc] initWithObjects:@"扩展CAlayer corner radius",@"leancloud cloud Engine", nil];
+    _tableCellTitle = [[NSArray alloc] initWithObjects:@"扩展CAlayer corner radius",@"leancloud cloud Engine",@"_User include pointer", nil];
     return tableView;
 }
 
@@ -83,6 +85,10 @@
     }
     if(indexPath.row == 1){
         LeanCloudCloudEngineViewController *vc = [[LeanCloudCloudEngineViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    if(indexPath.row == 2){
+        UserIncludePointerViewController *vc = [[UserIncludePointerViewController alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }
 }
