@@ -9,7 +9,7 @@
 #import "TodoModel.h"
 @interface TodoModel()
 
-@property (nonatomic, retain) NSString *myString;
+@property (nonatomic, retain) NSString<Ignore> *myString;
 
 @end
 @implementation TodoModel
