@@ -20,7 +20,7 @@
     [self.view setBackgroundColor:[UIColor whiteColor]];
     //[self functionTwo];
     //[self functionThree];
-    [self functionFour];
+    [self functionFive];
     // Do any additional setup after loading the view.
     
     
@@ -118,6 +118,15 @@
                                        NSLog(@"getTodo Error: %@", error);
                                    }
                                }];
+}
+
+-(void)functionFive{
+    AVQuery *query = [AVQuery queryWithClassName:@"Todo"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        NSArray<AVObject *> *todos = objects;
+        NSDictionary *name = [todos[0] objectForKey:@"harryObject"];
+        NSLog([name objectForKey:@"gender"]);
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
