@@ -7,7 +7,8 @@
 //
 
 #import "LeanCloudCloudEngineViewController.h"
-
+#import "TodoModel.h"
+#import "JSONModelLib.h"
 @interface LeanCloudCloudEngineViewController ()
 
 @end
@@ -18,7 +19,8 @@
     [super viewDidLoad];
     [self.view setBackgroundColor:[UIColor whiteColor]];
     //[self functionTwo];
-    [self functionThree];
+    //[self functionThree];
+    [self functionFour];
     // Do any additional setup after loading the view.
     
     
@@ -90,6 +92,27 @@
                                            NSString *cagegoryName = [category objectForKey:@"name"];
                                            NSLog(cagegoryName);
                                        }
+                                   }
+                                   else {
+                                       NSLog(@"getTodo Error: %@", error);
+                                   }
+                               }];
+}
+
+-(void)functionFour{
+    TodoModel *model = [[TodoModel alloc] init];
+    model.name = @"harryfengTodoModel";
+    
+    NSString *lastname = [model getLastName];
+    NSString *lName = model.getLastName;
+    NSDictionary *dicParameters = [NSDictionary dictionaryWithObject:[model toJSONString]
+                                                              forKey:@"object"];
+    
+    [AVCloud rpcFunctionInBackground:@"saveModel"
+                      withParameters:dicParameters
+                               block:^(id object, NSError *error) {
+                                   if(error == nil){
+                                       
                                    }
                                    else {
                                        NSLog(@"getTodo Error: %@", error);

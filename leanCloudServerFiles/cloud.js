@@ -41,7 +41,19 @@ AV.Cloud.define('checkError', function(request, response) {
     query.find().then(function (todos) {
         response.success(todos);
     }, function (error) {
-        response.success(error);
+        response.error(error);
+    });
+});
+
+AV.Cloud.define('saveModel', function(request, response) {
+    var model = request.params.object;
+    console.log(model);
+    var Todo = AV.Object.extend('Todo');
+    var todo = new Todo();
+    todo.save(JSON.parse(model)).then(function (todo) {
+        response.success(todo);
+    }, function (error) {
+        response.error(error);
     });
 });
 

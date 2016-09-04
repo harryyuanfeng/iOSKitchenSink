@@ -20,6 +20,7 @@
 		2F6CBE9C1D67FC80008D2513 /* CALayer+extendCornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6CBE9B1D67FC80008D2513 /* CALayer+extendCornerRadius.m */; };
 		2F6CBE9F1D680002008D2513 /* extendCornerRadiusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6CBE9E1D680002008D2513 /* extendCornerRadiusViewController.m */; };
 		2FD84F4E1D7A754C0020FA2E /* UserIncludePointerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD84F4D1D7A754C0020FA2E /* UserIncludePointerViewController.m */; };
+		2FD84F511D7BD6F30020FA2E /* TodoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD84F501D7BD6F30020FA2E /* TodoModel.m */; };
 		663D917A952A38CDBC9FEB2A /* libPods-iosKitchenSinkTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66D2D1FF66001EDA127CC78F /* libPods-iosKitchenSinkTests.a */; };
 		A7721A1C8D2C5D21E2BA5FBA /* libPods-iosKitchenSink.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17653E3B8BF4590210122402 /* libPods-iosKitchenSink.a */; };
 		E0F7189170C106C91EBC5FBF /* libPods-iosKitchenSinkUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE912442F397D3D035C95736 /* libPods-iosKitchenSinkUITests.a */; };
@@ -72,6 +73,8 @@
 		2F6CBEA01D682FAE008D2513 /* Define.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Define.h; sourceTree = "<group>"; };
 		2FD84F4C1D7A754C0020FA2E /* UserIncludePointerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserIncludePointerViewController.h; sourceTree = "<group>"; };
 		2FD84F4D1D7A754C0020FA2E /* UserIncludePointerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserIncludePointerViewController.m; sourceTree = "<group>"; };
+		2FD84F4F1D7BD6F30020FA2E /* TodoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodoModel.h; sourceTree = "<group>"; };
+		2FD84F501D7BD6F30020FA2E /* TodoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodoModel.m; sourceTree = "<group>"; };
 		3B9ED24AFFAB9F7245FFB32C /* Pods-iosKitchenSinkUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosKitchenSinkUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iosKitchenSinkUITests/Pods-iosKitchenSinkUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		66D2D1FF66001EDA127CC78F /* libPods-iosKitchenSinkTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iosKitchenSinkTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AFBAF279906569D462D0AD5 /* Pods-iosKitchenSink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosKitchenSink.release.xcconfig"; path = "Pods/Target Support Files/Pods-iosKitchenSink/Pods-iosKitchenSink.release.xcconfig"; sourceTree = "<group>"; };
@@ -123,6 +126,8 @@
 			children = (
 				2F05AEE61D780E200029249E /* LeanCloudCloudEngineViewController.h */,
 				2F05AEE71D780E200029249E /* LeanCloudCloudEngineViewController.m */,
+				2FD84F4F1D7BD6F30020FA2E /* TodoModel.h */,
+				2FD84F501D7BD6F30020FA2E /* TodoModel.m */,
 			);
 			name = LeanCloudCloudEngineViewController;
 			sourceTree = "<group>";
@@ -514,6 +519,7 @@
 				2F6CBE6A1D67E17F008D2513 /* iosKitchenSink.xcdatamodeld in Sources */,
 				2F6CBE611D67E17F008D2513 /* AppDelegate.m in Sources */,
 				2F05AEE81D780E200029249E /* LeanCloudCloudEngineViewController.m in Sources */,
+				2FD84F511D7BD6F30020FA2E /* TodoModel.m in Sources */,
 				2F6CBE5E1D67E17F008D2513 /* main.m in Sources */,
 				2F6CBE9F1D680002008D2513 /* extendCornerRadiusViewController.m in Sources */,
 			);
