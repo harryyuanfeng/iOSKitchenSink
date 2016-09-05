@@ -10,5 +10,8 @@
 #import "JSONModel.h"
 @interface TodoModel : JSONModel
 @property NSString *name;
+@property AVFile *imageFile;
+@property NSString *imageFileString;
+@property NSString *imageFileId;
 -(NSString *)getLastName;
 @end

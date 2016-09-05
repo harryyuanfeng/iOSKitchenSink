@@ -20,7 +20,8 @@
     [self.view setBackgroundColor:[UIColor whiteColor]];
     //[self functionTwo];
     //[self functionThree];
-    [self functionFive];
+    //[self functionFive];
+    [self functionFour];
     // Do any additional setup after loading the view.
     
     
@@ -102,22 +103,30 @@
 -(void)functionFour{
     TodoModel *model = [[TodoModel alloc] init];
     model.name = @"harryfengTodoModel";
+    //UIImage *image = [UIImage]
+    UIImage *image = [UIImage imageNamed:@"loginLogo512"];
+    NSData *imageData = UIImageJPEGRepresentation(image,0.1);
+    AVFile *file = [AVFile fileWithData:imageData];
+    [file saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        //model.imageFileString = [fil];
+        model.imageFileId = file.objectId;
+        NSString *lastname = [model getLastName];
+        NSString *lName = model.getLastName;
+        NSDictionary *dicParameters = [NSDictionary dictionaryWithObject:[model toJSONString]
+                                                                  forKey:@"object"];
+        
+        [AVCloud rpcFunctionInBackground:@"saveModel"
+                          withParameters:dicParameters
+                                   block:^(id object, NSError *error) {
+                                       if(error == nil){
+                                           
+                                       }
+                                       else {
+                                           NSLog(@"getTodo Error: %@", error);
+                                       }
+                                   }];
+    }];
     
-    NSString *lastname = [model getLastName];
-    NSString *lName = model.getLastName;
-    NSDictionary *dicParameters = [NSDictionary dictionaryWithObject:[model toJSONString]
-                                                              forKey:@"object"];
-    
-    [AVCloud rpcFunctionInBackground:@"saveModel"
-                      withParameters:dicParameters
-                               block:^(id object, NSError *error) {
-                                   if(error == nil){
-                                       
-                                   }
-                                   else {
-                                       NSLog(@"getTodo Error: %@", error);
-                                   }
-                               }];
 }
 
 -(void)functionFive{
