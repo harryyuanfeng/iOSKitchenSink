@@ -56,9 +56,17 @@
         [button addTarget:self action:@selector(functionThree) forControlEvents:UIControlEventTouchUpInside];
         button;
     });
+    buttonD = ({
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(10, CGRectGetMaxY(buttonC.frame)+10, 100, 40)];
+        [button setBackgroundColor:[UIColor grayColor]];
+        [button setTitle:@"functionFour" forState:UIControlStateNormal];
+        [button addTarget:self action:@selector(functionFour) forControlEvents:UIControlEventTouchUpInside];
+        button;
+    });
     [self.view addSubview:buttonA];
     [self.view addSubview:buttonB];
     [self.view addSubview:buttonC];
+    [self.view addSubview:buttonD];
 }
 
 -(void)logStringfyJsonAvObject:(AVObject *)object{
@@ -114,6 +122,15 @@
                                }];
 }
 
+-(NSMutableDictionary *)makeAVFileDic:(AVFile *)file{
+    NSMutableDictionary *dic = [[NSMutableDictionary alloc] init];
+    [dic setObject:file.objectId forKey:@"objectId"];
+    [dic setObject:@"File" forKey:@"__type"];
+    [dic setObject:file.name forKey:@"name"];
+    [dic setObject:file.url forKey:@"url"];
+    return dic;
+}
+
 -(void)functionFour{
     TodoModel *model = [[TodoModel alloc] init];
     model.name = @"harryfengTodoModel";
@@ -124,10 +141,8 @@
     [file saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         //model.imageFileString = [fil];
         model.imageFileId = file.objectId;
-        NSString *lastname = [model getLastName];
-        NSString *lName = model.getLastName;
-        NSDictionary *dicParameters = [NSDictionary dictionaryWithObject:[model toJSONString]
-                                                                  forKey:@"object"];
+        model.imageFileDic = [self makeAVFileDic:file];
+        NSDictionary *dicParameters = [NSDictionary dictionaryWithObject:[model toJSONString] forKey:@"object"];
         
         [AVCloud rpcFunctionInBackground:@"saveModel"
                           withParameters:dicParameters

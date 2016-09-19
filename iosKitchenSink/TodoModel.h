@@ -13,5 +13,6 @@
 @property AVFile *imageFile;
 @property NSString *imageFileString;
 @property NSString *imageFileId;
+@property NSMutableDictionary *imageFileDic;
 -(NSString *)getLastName;
 @end
