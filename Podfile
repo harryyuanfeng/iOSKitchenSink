@@ -7,6 +7,7 @@ target 'iosKitchenSink' do
 
   # Pods for iosKitchenSink
   pod 'AVOSCloud','3.3.1'
+  pod 'JSONModel'
   target 'iosKitchenSinkTests' do
     inherit! :search_paths
     # Pods for testing

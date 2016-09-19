@@ -7,8 +7,15 @@
 //
 
 #import "LeanCloudCloudEngineViewController.h"
-
-@interface LeanCloudCloudEngineViewController ()
+#import "TodoModel.h"
+#import "JSONModelLib.h"
+@interface LeanCloudCloudEngineViewController (){
+    UIButton *buttonA;
+    UIButton *buttonB;
+    UIButton *buttonC;
+    UIButton *buttonD;
+    UIButton *buttonE;
+}
 
 @end
 
@@ -17,61 +24,132 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view setBackgroundColor:[UIColor whiteColor]];
-    [self functionTwo];
+    //[self functionTwo];
+    //[self functionThree];
+    //[self functionFive];
+    [self functionFour];
+    [self setUpView];
     // Do any additional setup after loading the view.
     
     
 }
 
+-(void)setUpView{
+    buttonA = ({
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(10, 100, 100, 40)];
+        [button setBackgroundColor:[UIColor grayColor]];
+        [button setTitle:@"functionOne" forState:UIControlStateNormal];
+        [button addTarget:self action:@selector(functionOne) forControlEvents:UIControlEventTouchUpInside];
+        button;
+    });
+    buttonB = ({
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(10, CGRectGetMaxY(buttonA.frame)+10, 100, 40)];
+        [button setBackgroundColor:[UIColor grayColor]];
+        [button setTitle:@"functionTwo" forState:UIControlStateNormal];
+        [button addTarget:self action:@selector(functionTwo) forControlEvents:UIControlEventTouchUpInside];
+        button;
+    });
+    buttonC = ({
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(10, CGRectGetMaxY(buttonB.frame)+10, 100, 40)];
+        [button setBackgroundColor:[UIColor grayColor]];
+        [button setTitle:@"functionThree" forState:UIControlStateNormal];
+        [button addTarget:self action:@selector(functionThree) forControlEvents:UIControlEventTouchUpInside];
+        button;
+    });
+    [self.view addSubview:buttonA];
+    [self.view addSubview:buttonB];
+    [self.view addSubview:buttonC];
+}
+
+-(void)logStringfyJsonAvObject:(AVObject *)object{
+    NSMutableDictionary *serializedJSONDictionary = [object dictionaryForObject];//获取序列化后的字典
+    NSError *err;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:serializedJSONDictionary options:0 error:&err];//获取 JSON 数据
+    NSString *serializedString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];// 获取 JSON 字符串
+    NSLog(serializedString);
+}
 
 -(void)functionOne{
-    NSDictionary *dicParameters = [NSDictionary dictionaryWithObject:@"夏洛特烦恼"
-                                                              forKey:@"movie"];
-    
     // 调用指定名称的云函数 averageStars，并且传递参数
     [AVCloud callFunctionInBackground:@"getTodo"
-                       withParameters:dicParameters
+                       withParameters:nil
                                 block:^(id object, NSError *error) {
                                     if(error == nil){
                                         for(AVObject *theObject in (NSArray *)object){
-                                            //AVObject *theObject = (AVObject *)object[0];
-                                            NSLog([theObject objectForKey:@"name"]);
-                                            AVFile *file = [theObject objectForKey:@"headerImage"];
-                                            NSNumber *count = [theObject objectForKey:@"count"];
-                                            NSArray *tags = [theObject objectForKey:@"tags"];
-                                            AVObject *category = [theObject objectForKey:@"category"];
-                                            NSString *cagegoryName = [category objectForKey:@"name"];
-                                            NSLog(cagegoryName);
+                                            //[self logStringfyJsonAvObject:theObject];
                                         }
-                                                                            } else {
+                                    } else {
                                         NSLog(@"getTodo Error: %@", error);
                                     }
                                 }];
 }
 
 -(void)functionTwo{
-    NSDictionary *dicParameters = [NSDictionary dictionaryWithObject:@"夏洛特烦恼"
-                                                              forKey:@"movie"];
-    
     [AVCloud rpcFunctionInBackground:@"rpcGetTodo"
-                      withParameters:dicParameters
+                      withParameters:nil
                                block:^(id object, NSError *error) {
                                    if(error == nil){
                                        for(AVObject *theObject in (NSArray *)object){
-                                           //AVObject *theObject = (AVObject *)object[0];
-                                           NSLog([theObject objectForKey:@"name"]);
-                                           AVFile *file = [theObject objectForKey:@"headerImage"];
-                                           NSNumber *count = [theObject objectForKey:@"count"];
-                                           NSArray *tags = [theObject objectForKey:@"tags"];
-                                           AVObject *category = [theObject objectForKey:@"category"];
-                                           NSString *cagegoryName = [category objectForKey:@"name"];
-                                           NSLog(cagegoryName);
+                                           [self logStringfyJsonAvObject:theObject];
                                        }
                                    }
                                    else {
                                        NSLog(@"getTodo Error: %@", error);
                                    }
                                }];
+}
+
+-(void)functionThree{
+    [AVCloud rpcFunctionInBackground:@"cqlInPointerSearch"
+                      withParameters:nil
+                               block:^(id object, NSError *error) {
+                                   if(error == nil){
+                                       for(AVObject *theObject in (NSArray *)object){
+                                           [self logStringfyJsonAvObject:theObject];
+                                       }
+                                   }
+                                   else {
+                                       NSLog(@"getTodo Error: %@", error);
+                                   }
+                               }];
+}
+
+-(void)functionFour{
+    TodoModel *model = [[TodoModel alloc] init];
+    model.name = @"harryfengTodoModel";
+    //UIImage *image = [UIImage]
+    UIImage *image = [UIImage imageNamed:@"loginLogo512"];
+    NSData *imageData = UIImageJPEGRepresentation(image,0.1);
+    AVFile *file = [AVFile fileWithData:imageData];
+    [file saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        //model.imageFileString = [fil];
+        model.imageFileId = file.objectId;
+        NSString *lastname = [model getLastName];
+        NSString *lName = model.getLastName;
+        NSDictionary *dicParameters = [NSDictionary dictionaryWithObject:[model toJSONString]
+                                                                  forKey:@"object"];
+        
+        [AVCloud rpcFunctionInBackground:@"saveModel"
+                          withParameters:dicParameters
+                                   block:^(id object, NSError *error) {
+                                       if(error == nil){
+                                           
+                                       }
+                                       else {
+                                           NSLog(@"getTodo Error: %@", error);
+                                       }
+                                   }];
+    }];
+    
+}
+
+-(void)functionFive{
+    AVQuery *query = [AVQuery queryWithClassName:@"Todo"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        NSArray<AVObject *> *todos = objects;
+        NSDictionary *name = [todos[0] objectForKey:@"harryObject"];
+        NSLog([name objectForKey:@"gender"]);
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

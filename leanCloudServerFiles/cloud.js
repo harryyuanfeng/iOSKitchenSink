@@ -27,4 +27,34 @@ AV.Cloud.define('rpcGetTodo', function(request, response) {
     });
 });
 
+AV.Cloud.define('cqlInPointerSearch', function(request, response) {
+    var cql = 'select include category, * from _User where category in (select * from category where name = "fiona") and gender = "1" limit 1,10';
+    AV.Query.doCloudQuery(cql).then(function (data) {
+        var results = data.results;
+        response.success(results);
+    }, function (error) {
+    });
+});
+
+AV.Cloud.define('checkError', function(request, response) {
+    var query = new AV.Query('forbidenClass');
+    query.find().then(function (todos) {
+        response.success(todos);
+    }, function (error) {
+        response.error(error);
+    });
+});
+
+AV.Cloud.define('saveModel', function(request, response) {
+    var model = request.params.object;
+    console.log(model);
+    var Todo = AV.Object.extend('Todo');
+    var todo = new Todo();
+    todo.save(JSON.parse(model)).then(function (todo) {
+        response.success(todo);
+    }, function (error) {
+        response.error(error);
+    });
+});
+
 module.exports = AV.Cloud;
