@@ -19,6 +19,7 @@
 		2F6CBE851D67E180008D2513 /* iosKitchenSinkUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6CBE841D67E180008D2513 /* iosKitchenSinkUITests.m */; };
 		2F6CBE9C1D67FC80008D2513 /* CALayer+extendCornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6CBE9B1D67FC80008D2513 /* CALayer+extendCornerRadius.m */; };
 		2F6CBE9F1D680002008D2513 /* extendCornerRadiusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6CBE9E1D680002008D2513 /* extendCornerRadiusViewController.m */; };
+		2FAEE6791D91477C0055D511 /* CategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FAEE6781D91477C0055D511 /* CategoryModel.m */; };
 		2FC1138A1D8D315F00FB31C0 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 2FC113891D8D315F00FB31C0 /* README.md */; };
 		2FD84F4E1D7A754C0020FA2E /* UserIncludePointerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD84F4D1D7A754C0020FA2E /* UserIncludePointerViewController.m */; };
 		2FD84F511D7BD6F30020FA2E /* TodoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD84F501D7BD6F30020FA2E /* TodoModel.m */; };
@@ -72,6 +73,8 @@
 		2F6CBE9D1D680002008D2513 /* extendCornerRadiusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = extendCornerRadiusViewController.h; sourceTree = "<group>"; };
 		2F6CBE9E1D680002008D2513 /* extendCornerRadiusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = extendCornerRadiusViewController.m; sourceTree = "<group>"; };
 		2F6CBEA01D682FAE008D2513 /* Define.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Define.h; sourceTree = "<group>"; };
+		2FAEE6771D91477C0055D511 /* CategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryModel.h; sourceTree = "<group>"; };
+		2FAEE6781D91477C0055D511 /* CategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryModel.m; sourceTree = "<group>"; };
 		2FC113891D8D315F00FB31C0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2FD84F4C1D7A754C0020FA2E /* UserIncludePointerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserIncludePointerViewController.h; sourceTree = "<group>"; };
 		2FD84F4D1D7A754C0020FA2E /* UserIncludePointerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserIncludePointerViewController.m; sourceTree = "<group>"; };
@@ -130,6 +133,8 @@
 				2F05AEE71D780E200029249E /* LeanCloudCloudEngineViewController.m */,
 				2FD84F4F1D7BD6F30020FA2E /* TodoModel.h */,
 				2FD84F501D7BD6F30020FA2E /* TodoModel.m */,
+				2FAEE6771D91477C0055D511 /* CategoryModel.h */,
+				2FAEE6781D91477C0055D511 /* CategoryModel.m */,
 			);
 			name = LeanCloudCloudEngineViewController;
 			sourceTree = "<group>";
@@ -517,6 +522,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FD84F4E1D7A754C0020FA2E /* UserIncludePointerViewController.m in Sources */,
+				2FAEE6791D91477C0055D511 /* CategoryModel.m in Sources */,
 				2F6CBE9C1D67FC80008D2513 /* CALayer+extendCornerRadius.m in Sources */,
 				2FC1138A1D8D315F00FB31C0 /* README.md in Sources */,
 				2F6CBE641D67E17F008D2513 /* ViewController.m in Sources */,

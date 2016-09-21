@@ -8,6 +8,7 @@
 
 #import "LeanCloudCloudEngineViewController.h"
 #import "TodoModel.h"
+#import "CategoryModel.h"
 #import "JSONModelLib.h"
 @interface LeanCloudCloudEngineViewController (){
     UIButton *buttonA;
@@ -27,7 +28,7 @@
     //[self functionTwo];
     //[self functionThree];
     //[self functionFive];
-    [self functionFour];
+    //[self functionFour];
     [self setUpView];
     // Do any additional setup after loading the view.
     
@@ -63,10 +64,20 @@
         [button addTarget:self action:@selector(functionFour) forControlEvents:UIControlEventTouchUpInside];
         button;
     });
+    
+    buttonE = ({
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(10, CGRectGetMaxY(buttonD.frame)+10, 100, 40)];
+        [button setBackgroundColor:[UIColor grayColor]];
+        [button setTitle:@"functionFive" forState:UIControlStateNormal];
+        [button addTarget:self action:@selector(functionFive) forControlEvents:UIControlEventTouchUpInside];
+        button;
+    });
+    
     [self.view addSubview:buttonA];
     [self.view addSubview:buttonB];
     [self.view addSubview:buttonC];
     [self.view addSubview:buttonD];
+    [self.view addSubview:buttonE];
 }
 
 -(void)logStringfyJsonAvObject:(AVObject *)object{
@@ -142,7 +153,7 @@
         //model.imageFileString = [fil];
         model.imageFileId = file.objectId;
         model.imageFileDic = [self makeAVFileDic:file];
-        NSDictionary *dicParameters = [NSDictionary dictionaryWithObject:[model toJSONString] forKey:@"object"];
+        NSDictionary *dicParameters = [NSDictionary dictionaryWithObject:[model toDictionary] forKey:@"object"];
         
         [AVCloud rpcFunctionInBackground:@"saveModel"
                           withParameters:dicParameters
@@ -159,11 +170,25 @@
 }
 
 -(void)functionFive{
-    AVQuery *query = [AVQuery queryWithClassName:@"Todo"];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        NSArray<AVObject *> *todos = objects;
-        NSDictionary *name = [todos[0] objectForKey:@"harryObject"];
-        NSLog([name objectForKey:@"gender"]);
+    AVQuery *query = [AVQuery queryWithClassName:@"category"];
+    [query getFirstObjectInBackgroundWithBlock:^(AVObject *object, NSError *error) {
+        CategoryModel *category = [[CategoryModel alloc] init];
+        category.objectId = object.objectId;
+        TodoModel *todo = [[TodoModel alloc] init];
+        todo.name = @"with cagetory pointer";
+        //NSDictionary *dicParameters = @{@"Todo":[todo toJSONData],@"category":[category toJSONData]};
+         NSMutableDictionary *dicParameters = [NSMutableDictionary dictionaryWithObject:[todo toDictionary] forKey:@"Todo"];
+        [dicParameters setObject:[category toJSONString] forKey:@"category"];
+        [AVCloud rpcFunctionInBackground:@"saveModelWithPointer"
+                          withParameters:dicParameters
+                                   block:^(id object, NSError *error) {
+                                       if(error == nil){
+                                           
+                                       }
+                                       else {
+                                           NSLog(@"getTodo Error: %@", error);
+                                       }
+                                   }];
     }];
 }
 

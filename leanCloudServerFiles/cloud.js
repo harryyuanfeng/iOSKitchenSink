@@ -50,8 +50,32 @@ AV.Cloud.define('saveModel', function(request, response) {
     console.log(model);
     var Todo = AV.Object.extend('Todo');
     var todo = new Todo();
-    todo.save(JSON.parse(model)).then(function (todo) {
+    todo.save(model).then(function (todo) {
         response.success(todo);
+    }, function (error) {
+        response.error(error);
+    });
+});
+
+function parseJsonToAVObject(json,className){
+    var todo = AV.Object.createWithoutData(className, json.objectId);
+    return todo;
+}
+
+AV.Cloud.define('saveModelWithPointer', function(request, response) {
+    console.log('saveModelWithPointer');
+    var Todo = request.params.Todo;
+    var category = request.params.category;
+    var MyTodo = AV.Object.extend('Todo');
+    var mytodo = new MyTodo();
+    mytodo.save(Todo).then(function (todo) {
+        mytodo.set('category',parseJsonToAVObject(category,"category"));
+        mytodo.save().then(function(result){
+            response.success(result);
+        },function(error){
+            response.error(error);
+        })
+
     }, function (error) {
         response.error(error);
     });

@@ -7,12 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "JSONModel.h"
+#import "CategoryModel.h"
 @interface TodoModel : JSONModel
 @property NSString *name;
 @property AVFile *imageFile;
 @property NSString *imageFileString;
 @property NSString *imageFileId;
+@property CategoryModel *category;
 @property NSMutableDictionary *imageFileDic;
 -(NSString *)getLastName;
 @end
